@@ -44,6 +44,11 @@ h1, h2, h3, a {
     font-family: var(--title);
 }
 
+h4 {
+    margin:0;
+    padding:0;
+}
+
 a {
     text-decoration: none;
 }
@@ -160,7 +165,14 @@ header .button {
 .sunIcons {
     width:100%;
     margin:auto;
+}
+
+.sunIcons:first-of-type {
     margin-bottom:-12vh;
+}
+
+.sunIcons:nth-of-type(2) {
+    margin-top:-12vh;
 }
 
 /*  ----- Structure -----
@@ -191,6 +203,7 @@ header .button {
     padding-top:8.8vw;
     background-color: var(--primary);
     color:var(--accent);
+    box-shadow:0px 0px 300px 0px var(--primary);
 }
 
 .charaText {
@@ -285,12 +298,62 @@ header .button {
     --buttonWidth:16vw;
 }
 
+#lightSun {
+    display:flex;
+    width:8vw;
+    margin:auto;
+    margin-bottom:-8.5vh;
+    position:relative;
+    z-index:10;
+    transition:.3s ease-in-out;
+}
+
 /* ====== Footer  ====== */
 
 footer {
     width:100vw;
     height:20vh;
+    display:flex;
+    justify-content: space-between;
+    color:var(--light);
     background-color: var(--dark);
+}
+
+#logos {
+    display:flex;
+    align-items:center;
+    margin-left:2vw;
+}
+
+#logos img:first-of-type{
+    width:8.5vw;
+}
+
+#logos img:nth-of-type(2){
+    width:9.5vw;
+    margin-left:3.6vw;
+}
+
+#names {
+    display:flex;
+    align-items: center;
+}
+
+#names p {
+    width:23vw;
+    text-align:right;
+    font-size:0.6rem;
+    letter-spacing: 2px;
+}
+
+#inusTale {
+    margin-left:6vw;
+    margin-right:3vw;
+    text-align:right;
+}
+
+#inusTale p {
+    width:auto;
 }
 
 /* ====== Animations  ====== */
@@ -320,6 +383,6 @@ footer {
     0% {
     }
     100% {
-        filter: drop-shadow(1px 1px 0px var(--skyBlue));
+        filter: drop-shadow(1px 2px 0px var(--skyBlue));
     }
 }
