@@ -1,0 +1,325 @@
+/* ====== GENERAL ====== */
+
+:root {
+    --accent:#B9B4A2;
+    --light:#FAF8F4;
+    --primary:#4C4945;
+    --dark:#3D3730;
+    --skyBlue:#6282CB;
+    --title:'Abhaya Libre', serif;
+    --text:'Open Sans', sans-serif;
+}
+
+/* ----- Rules -----
+- Position
+- Dimmensions
+- Display & Flex
+- Margins & Padding
+- Color & Background
+- Typography
+- Transitions
+*/
+
+body {
+    max-width:100vw;
+    width: 100vw;
+    height:auto;
+    overflow-x:hidden;
+    padding:0;
+    margin:0;
+    background-color: var(--light);
+    color:var(--primary);
+    font-family: var(--text);
+}
+
+h1, h2, h3 {
+    margin:0;
+    padding:0;
+    font-size:3rem;
+    letter-spacing: 4px;
+    width:35vw;
+}
+
+h1, h2, h3, a {
+    font-family: var(--title);
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+hr {
+    width:15vw;
+    margin:auto;
+    border:1px solid var(--accent);
+}
+
+.button {
+    --upperWidth:19vw;
+    display: block;
+    width:var(--buttonWidth);
+    margin-top:4.2vw;
+    color:var(--buttonText);
+    background-color:var(--buttonBackground);
+    outline:3px solid var(--buttonBackground);
+    outline-offset: 6px;
+    font-size:2.5rem;
+    line-height: 135%;
+    letter-spacing: 4px;
+    position:relative;
+    z-index:20;
+    transition:.4s ease-in-out;
+}
+
+.button:hover {
+    letter-spacing: 8px;
+    outline:1px solid var(--buttonBackground);
+    width:var(--upperWidth);
+    text-shadow: 1px 1px 1px lightgray;
+}
+
+/* ====== 0 - TITLE SCREEN ====== */
+
+header {
+    width:100%;
+    height:115vh;
+}
+
+#clouds {
+    top:0;
+    left:0;
+    width:100vw;
+    height:220vh;
+    text-align: center;
+    position:absolute;
+    z-index: 10;
+    animation: moveClouds 10s linear infinite alternate forwards;
+}
+
+#title {
+    width:90vw;
+    margin:auto;
+    margin-top:20vh;
+    text-align: center;
+    position:relative;
+    z-index:20;
+    animation:dropShadowTitle 3s ease-in-out infinite alternate forwards;
+}
+
+#sky {
+    top:0;
+    left:0;
+    width:100vw;
+    height:110vh;
+    position:absolute;
+    z-index: -1;
+    animation: lightSky 3s ease-in-out infinite alternate forwards;
+}
+
+header .button {
+    --buttonText:var(--skyBlue);
+    --buttonBackground:var(--light);
+    --buttonWidth:20vw;
+    --upperWidth:21vw;
+    margin:auto;
+    margin-top:7vh;
+    text-align: center;
+}
+
+/* ====== 1 - INTRO ====== */
+
+#intro {
+    width:100vw;
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+}
+
+#intro p {
+    width:40vw;
+    margin-top:1.9vw;
+}
+
+#intro .button {
+    --buttonText:var(--light);
+    --buttonBackground:var(--accent);
+    --buttonWidth:16vw;
+}
+
+/* ====== 2 - Characters  ====== */
+
+
+.sunIcons {
+    width:100%;
+    margin:auto;
+    margin-bottom:-12vh;
+}
+
+/*  ----- Structure -----
+- #characters
+    - .charaText
+    - .charaPres
+        - #charaImages
+            - #nao
+            - #inu
+        - #charaIntro
+            - .charaCard
+                - Nom
+                - hr
+                - .undertext
+                - .summary
+            - .charaCard
+                - Nom
+                - hr
+                - .undertext
+                - .summary
+*/
+
+
+#characters {
+    height:90vh;
+    display:flex;
+    justify-content: space-between;
+    padding-top:8.8vw;
+    background-color: var(--primary);
+    color:var(--accent);
+}
+
+.charaText {
+    width:34vw;
+    margin-left:9vw;
+}
+
+.charaPres {
+    width:50vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#charaImages {
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#charaIntro {
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.charaCard {
+    width:19vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.undertext {
+    letter-spacing: 8px;
+    margin:0;
+}
+
+#nao {
+    width:10vw;
+}
+
+#inu {
+    width:16vw;
+}
+
+/* ====== 3 - Synopsis  ====== */
+
+#synopsis {
+    height:100vh;
+    display:flex;
+    justify-content: space-between;
+}
+
+#synopsis img {
+    height:75vh;
+    margin-top:10vh;
+    margin-left:10vw;
+}
+
+.synopsisText {
+    width:36vw;
+    margin-top:17vh;
+    margin-right:9vw;
+    text-align: right;
+}
+
+/* ====== 4 - Play  ====== */
+
+#play {
+    width:100vw;
+    height:70vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    background-color: var(--primary);
+    color:var(--accent);
+}
+
+#play h1 {
+    width:100%;
+    font-size:4rem;
+}
+
+#play .button {
+    --buttonText:var(--primary);
+    --buttonBackground:var(--accent);
+    --buttonWidth:16vw;
+}
+
+/* ====== Footer  ====== */
+
+footer {
+    width:100vw;
+    height:20vh;
+    background-color: var(--dark);
+}
+
+/* ====== Animations  ====== */
+
+@keyframes moveClouds {
+    0% {
+        width:100vw;
+        height:220vh;
+
+    }
+    100% {
+        width:105vw;
+        height:225vh;
+    }
+}
+
+@keyframes lightSky {
+    0% {
+        filter:brightness(100%);
+    }
+    100% {
+        filter:brightness(120%);
+    }
+}
+
+@keyframes dropShadowTitle {
+    0% {
+    }
+    100% {
+        filter: drop-shadow(1px 1px 0px var(--skyBlue));
+    }
+}
