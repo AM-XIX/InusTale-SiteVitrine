@@ -365,8 +365,8 @@ footer {
 
     }
     100% {
-        width:105vw;
-        height:225vh;
+        width:110vw;
+        height:230vh;
     }
 }
 
@@ -375,7 +375,7 @@ footer {
         filter:brightness(100%);
     }
     100% {
-        filter:brightness(120%);
+        filter:brightness(130%);
     }
 }
 
@@ -383,6 +383,6 @@ footer {
     0% {
     }
     100% {
-        filter: drop-shadow(1px 2px 0px var(--skyBlue));
+        filter: drop-shadow(4px 4px 0px var(--skyBlue));
     }
 }
